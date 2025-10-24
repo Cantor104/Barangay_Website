@@ -19,8 +19,8 @@ header {
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   border-radius: 0 0 2rem 2rem;
 }
-header h1 { font-size: 2rem; color: #065f46; font-weight: 650; }
-nav a { font-size: 1.5rem; margin: 0 1rem; text-decoration: none; color: #065f46; font-weight: 600; transition: 0.3s; }
+header h1 { font-size: 1.5rem; color: #065f46; font-weight: 650; }
+nav a { font-size: 1rem; margin: 0 1rem; text-decoration: none; color: #065f46; font-weight: 600; transition: 0.3s; }
 nav a:hover { color: #047857; transform: translateY(-2px); }
 main { text-align: center; padding: 3rem 2rem; }
 main h2 { font-size: 3rem; color: #064e3b; margin-bottom: 1rem; animation: fadeSlide 1s ease; }
@@ -103,4 +103,5 @@ footer {
   background: linear-gradient(to bottom right, #064e3b, #065f46);
   color: white; padding: 3rem 1rem; text-align: center;
   border-radius: 2rem 2rem 0 0; box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
+
 }
