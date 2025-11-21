@@ -1,0 +1,164 @@
+/* Reset & Background */
+body {
+    background: #525659; /* Dark grey background for document viewer feel */
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Action Bar (Print Buttons) */
+.action-bar {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.action-bar button {
+    padding: 10px 20px;
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* The Paper (A4 Size) */
+.paper {
+    background: white;
+    width: 210mm;
+    min-height: 297mm; /* A4 Height */
+    padding: 25mm;     /* Standard Margins */
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Header Layout */
+.doc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo-left img, .logo-right img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border: 1px dashed #ccc; /* Placeholder border if no image */
+}
+
+.header-text p { margin: 2px 0; font-size: 12pt; }
+.header-text h3 { margin: 5px 0; font-size: 14pt; font-weight: bold; }
+
+.divider-line {
+    border: 1px solid black;
+    margin-bottom: 40px;
+}
+
+/* Title */
+.doc-title {
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 50px;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Text */
+.doc-body {
+    font-size: 12pt;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.salutation {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.paragraph {
+    margin-bottom: 20px;
+    text-indent: 40px; /* Indent first line */
+}
+
+.purpose-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16pt;
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+
+/* Signatures */
+.signatures {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign-column {
+    text-align: center;
+    width: 200px;
+}
+
+.sign-line {
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.sign-label {
+    font-size: 10pt;
+}
+
+/* Footer / Seal */
+.doc-footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 9pt;
+    position: absolute;
+    bottom: 25mm;
+    width: calc(100% - 50mm); /* Width minus margins */
+}
+
+.seal-box {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    color: #ccc;
+    font-weight: bold;
+}
+
+/* PRINT SETTINGS (Hide buttons, remove shadows) */
+@media print {
+    body {
+        background: none;
+        padding: 0;
+    }
+    .no-print {
+        display: none;
+    }
+    .paper {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+        height: auto;
+        padding: 20mm; /* Slightly smaller margin for print safety */
+    }
+    @page {
+        margin: 0;
+        size: auto;
+    }
+}

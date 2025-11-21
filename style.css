@@ -48,6 +48,55 @@ section {
 }
 
 
+/* User Profile in Header */
+.user-profile {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(236, 253, 245, 0.8);
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid #bbf7d0;
+  margin-left: 10px;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #065f46;
+  font-size: 0.95rem;
+}
+
+.logout-btn {
+  background: #ef4444; /* Red color for logout */
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.login-link {
+  background: #047857;
+  color: white !important;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+.login-link:hover {
+  background: #065f46;
+}
+
+
+
+
+
 #chat-btn {
   position: fixed;
   bottom: 2rem;
